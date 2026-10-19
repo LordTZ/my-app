@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 const features = [
   { title: "UX/UI", desc: "มาตรฐานสากล" },
@@ -24,8 +25,8 @@ export default function Home() {
         <p className="mt-4 text-muted-foreground">
           สร้างด้วย Next.js, Tailwind และ shadcn/ui
         </p>
-        <Button className="mt-6" size="lg">
-          เริ่มเลย
+        <Button asChild>
+          <Link href="/about">เริ่มเลย</Link>
         </Button>
       </section>
 
